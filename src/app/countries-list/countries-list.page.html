@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listes des pays</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Création d'un nouveau Pays</h2>
+  <ion-button routerLink="/tabs/countries/new">Créer un Pays</ion-button>
+
+  <h2>Liste des pays</h2>
+  <ion-grid>
+      <ion-row>
+          <ion-col size="4" *ngFor="let country of countries">
+              <ion-card [routerLink]="['/tabs/countries', country.id]">
+                  <img [src]="country.map" [alt]="country.name">
+              </ion-card>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>
