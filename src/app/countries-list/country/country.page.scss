@@ -1,0 +1,31 @@
+.imagecard{
+    max-height: 150px;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+img{
+    width: 200px;
+    height: auto;
+}
+
+#trash{
+    position: absolute; 
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+ion-card-title{
+    text-align: center;
+}
+
+ion-col{
+    text-align: center;
+}
+

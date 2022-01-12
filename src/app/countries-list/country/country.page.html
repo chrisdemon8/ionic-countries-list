@@ -8,55 +8,65 @@
 </ion-header>
 
 <ion-content>
-  <ion-button (click)="setModif()">Rendre Modifiable</ion-button>
+ 
+    <ion-button (click)="setModif()" *ngIf="!modif">Rendre Modifiable</ion-button>
+  
   <div *ngIf="!modif">
+
+
     <ion-grid *ngIf="country">
-      <ion-row> 
-        <ion-col>
-          <ion-button (click)="onDelete(country.id)">
-            <ion-icon name="trash"></ion-icon>
-          </ion-button>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">
-          <img [src]="country.flag">
-        </ion-col>
-        <ion-col size="6">
-          <strong>Nom du pays</strong> <br>
-          {{country.name}} <br>
-          <strong>Drapeau</strong> <br>
-          {{country.flag}} <br>
-          <strong>Devise du pays</strong> <br>
-          {{country.motto}} <br>
-          <strong>Carte</strong> <br>
-          {{country.map}} <br>
-          <strong>Capital</strong> <br>
-          {{country.capital}} <br> 
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <strong>Langues officielles</strong><br>
-          {{country.language}} <br>
-        </ion-col>
-        <ion-col>
-          <strong>Superficie</strong> <br>
-          {{country.area}}
-        </ion-col>
-        <ion-col>
-          <strong>Continent</strong> <br>
-          {{country.continent}}
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <strong>Résumé</strong> <br>
-          <p>
-            test
-          </p>
-        </ion-col>
-      </ion-row>
+      <ion-card>
+        <ion-button id="trash" (click)="onDelete(country.id)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+        <div class="imagecard">
+          <img [src]="country.flag" />
+        </div>
+        <ion-card-header>
+          <ion-card-title><strong>Nom du pays</strong><br>{{country.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+
+          <ion-row>
+            <ion-col size="12">
+              <img [src]="country.map">
+            </ion-col>
+            <ion-col size="6">
+              <strong>Nom du pays </strong> <br>
+              {{country.name}} <br>
+              <strong>Devise du pays </strong> <br>
+              {{country.motto}} <br>
+              <strong>Capital </strong> <br>
+              {{country.capital}} <br>
+            </ion-col>
+            <ion-col size="6">
+              <strong>Langues officielles</strong><br>
+              {{country.language}} <br>
+              <strong>Superficie</strong> <br>
+              {{country.area}} km² <br>
+              <strong>Continent</strong> <br>
+              {{country.continent}}
+            </ion-col>
+            <ion-col size="12">
+              <strong>IDH</strong><br>
+              {{country.idh}} <br>
+              <strong>Climat</strong> <br>
+              {{country.climate}} <br>
+              <strong>Population</strong> <br>
+              {{country.population}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <strong>Résumé</strong> <br>
+              <p>
+                test
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+
     </ion-grid>
   </div>
   <div *ngIf="modif && country">
@@ -95,18 +105,18 @@
     <ion-item>
       <ion-label>Population</ion-label>
       <ion-input type="text" [(ngModel)]="country.population"></ion-input>
-    </ion-item> 
+    </ion-item>
     <ion-item>
       <ion-label>IDH</ion-label>
-      <ion-textarea rows="20" [(ngModel)]="country.idh"></ion-textarea>
+      <ion-textarea type="text" [(ngModel)]="country.idh"></ion-textarea>
     </ion-item>
     <ion-item>
       <ion-label>Densité</ion-label>
-      <ion-textarea rows="20" [(ngModel)]="country.density"></ion-textarea>
+      <ion-textarea type="text" [(ngModel)]="country.density"></ion-textarea>
     </ion-item>
     <ion-item>
       <ion-label>Climat</ion-label>
-      <ion-textarea rows="20" [(ngModel)]="country.climate"></ion-textarea>
+      <ion-textarea type="text" [(ngModel)]="country.climate"></ion-textarea>
     </ion-item>
     <p class="text-center">
       <ion-button (click)="onModif()">Modifier</ion-button>

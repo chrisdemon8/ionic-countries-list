@@ -13,8 +13,7 @@ export class CountriesListPage implements OnInit {
 
   ngOnInit(): void {
     this.Country.getAllCountries().subscribe((data: any) => {
-      this.countries = data;
-      console.log(data)
+      this.countries = data; 
     })
   }
 

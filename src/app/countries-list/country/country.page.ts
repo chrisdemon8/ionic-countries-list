@@ -65,9 +65,28 @@ export class CountryPage implements OnInit {
     });
   }
 
-  onDelete(id: any) {
-    this.Country.delete(id);
-    this.router.navigate(['/tabs/countries'])
+  async onDelete(id: any) {
+
+    const alert = await this.alertCtrl.create({
+      header: 'Etes-vous sur de vouloir supprimer ?',
+      subHeader: 'Le pays sera supprimé définitivement',
+      buttons: [
+        {
+          text: 'Annuler',
+          role: 'Cancel'
+        }, {
+          text: 'Confirmer',
+          handler: () => {
+            this.Country.delete(id);
+            this.router.navigate(['/tabs/countries'])
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+
+
   }
 
 }

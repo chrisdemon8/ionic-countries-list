@@ -1,9 +1,67 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>countryNew</ion-title>
+    <ion-title>Nouveau pays</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+    <ion-item>
+      <ion-label>Carte</ion-label>
+      <ion-input type="text" placeholder="Mettre un lien d'une image de carte" [(ngModel)]="country.map"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nom du pays</ion-label>
+      <ion-input type="text" placeholder="Mettre le nom du pays" [(ngModel)]="country.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Drapeau</ion-label>
+      <ion-input type="text" placeholder="Mettre un lien d'une image de drapeaux" [(ngModel)]="country.flag">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Devise</ion-label>
+      <ion-input type="text" placeholder="Mettre la devise du pays" [(ngModel)]="country.motto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Langue officielles</ion-label>
+      <ion-input type="text" placeholder="Mettre les langues du pays" [(ngModel)]="country.language"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Capital</ion-label>
+      <ion-input type="text" placeholder="Mettre la capital du pays" [(ngModel)]="country.capital"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Superficie</ion-label>
+      <ion-input type="text" placeholder="Mettre la superficie du pays" [(ngModel)]="country.area"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Continent</ion-label>
+      <ion-input type="text" placeholder="Mettre le continent où se trouve le pays" [(ngModel)]="country.continent">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Population</ion-label>
+      <ion-input type="text" placeholder="Mettre la population du pays" [(ngModel)]="country.population"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>IDH</ion-label>
+      <ion-textarea type="text" placeholder="Mettre l'indice de développement humain du pays" [(ngModel)]="country.idh">
+      </ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Densité</ion-label>
+      <ion-textarea type="text" placeholder="Mettre la densité du pays en habitant/km²" [(ngModel)]="country.density">
+      </ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Climat</ion-label>
+      <ion-textarea type="text" placeholder="Mettre le climat du pays" [(ngModel)]="country.climate"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="add()">Ajouter</ion-button>
+    </ion-item>
+  </div>
 </ion-content>

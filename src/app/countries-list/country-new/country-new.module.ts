@@ -21,39 +21,8 @@ import { Router } from '@angular/router';
   declarations: [CountryNewPage]
 })
 
-export class CountryNewPageModule implements OnInit{
-  
-  public country!: Country;
+export class CountryNewPageModule {
 
-  constructor(
-    private Country: CountryService,
-    private toastCtrl: ToastController,
-    private router: Router
-  ) { }
-
-  ngOnInit() {
-    this.country = new Country();
-  }
-
-  async presentToast() {
-    const toast = this.toastCtrl.create({
-      message: 'Nouveau pays enregistré',
-      duration: 2000
-    });
-    (await toast).present().then(() => {
-      setTimeout(() => {
-        this.router.navigate(['/tabs/countries']);
-      }, 2000);
-    });
-  }
-
-
-  add() {
-    this.Country.saveNewCountry(this.country).subscribe(() => {
-      this.country = new Country();
-      this.presentToast();
-    })
-  }
 
 }
- 
+
