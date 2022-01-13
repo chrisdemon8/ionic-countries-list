@@ -1,43 +1,53 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>A propos</ion-title>
+    <ion-title>
+      Home
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <h1>Qui suis-je ?</h1>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Les pays du monde</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size="3">
-        <img src="/assets/img/me.webp">
-      </ion-col>
+  <div id="container">
+    <header class='masthead'>
+      <p class='masthead-intro'>Bonjour, je suis</p>
+      <h1 class='masthead-heading'>Christophe PETRE!</h1>
+    </header>
+    <section class="introduction-section">
+      <h1>Introduction</h1>
+      <p>Je suis étudiant informatique à l'IUT de Metz en Licence pro Développeur Web et mobile pour le commerce
+        électronique.</p>
+      <p>J'aime les nouvelles technologies mais je suis également un passioné de géographie.</p>
+    </section>
+    <section class="project-section">
+      <h1>Pourquoi la géographie ?</h1>
+      <p>Depuis que je suis petit j'adore apprendre les drapeaux et l'emplacement des différents pays du monde. Avec mes
+        soeurs et mon père nous faisions des concours pour savoir qui connaissait le plus de pays.</p>
+      <p>C'est pour cette raison que j'ai voulu créer un site permettant d'apprendre les différentes informations des
+        pays du monde.</p>
+    </section>
+    <section class="questions-section">
+      <h1>Plus encore sur moi et mon projet</h1>
+      <h2>Le projet</h2>
+      <p>Le projet permet d'ajouter des nouveaux pays dans la base de données. Il permet de les modifier et de les
+        supprimer.</p>
+      <h2>Pourquoi je veux devenir développeur web ?</h2>
+      <p>Je veux devenir développeur web car j'aime la proximité qu'il y a entre le client et le développeur, c'est un
+        métier humain malgré le fait que nous soyons derrière nos machines.</p>
+    </section>
 
-      <ion-col size="9">
-        <p>
-          Je m'appelle <strong>Méliodas</strong> et je suis un développeur web junior. Je suis passionné par le développement web et je suis à la recherche d'un stage de fin d'année.
-        </p>
-      </ion-col>
-    </ion-row>
+    <footer class="content-footer">
+      <p>Vous pouvez me retrouver sur les réseaux suivant :</p>
+      <ul class="social">
+        <li><a class="css-is-deranged" href="https://github.com/chrisdemon8">GitHub</a></li>
+        <li><a class="css-is-deranged" href="https://chrisdemon8.github.io/christophe_cv/">Portfolio</a></li>
+      </ul>
 
-    <ion-row>
-      <ion-col>
-        <h2>Mon parcours</h2>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non suscipit, aspernatur ab culpa quas repudiandae! Odit excepturi praesentium in ut, labore ad minus deleniti vero dolorem suscipit. Eaque ipsum odio sapiente adipisci modi illum. Provident ea doloremque, qui perspiciatis ut animi magni nihil esse illo consequatur nostrum distinctio dignissimos?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non suscipit, aspernatur ab culpa quas repudiandae! Odit excepturi praesentium in ut, labore ad minus deleniti vero dolorem suscipit. Eaque ipsum odio sapiente adipisci modi illum. Provident ea doloremque, qui perspiciatis ut animi magni nihil esse illo consequatur nostrum distinctio dignissimos?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non suscipit, aspernatur ab culpa quas repudiandae! Odit excepturi praesentium in ut, labore ad minus deleniti vero dolorem suscipit. Eaque ipsum odio sapiente adipisci modi illum. Provident ea doloremque, qui perspiciatis ut animi magni nihil esse illo consequatur nostrum distinctio dignissimos?
-        </p>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+    </footer>
+  </div>
 </ion-content>
