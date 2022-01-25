@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Photo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+
+    <div>
+
+      <h2>Prendre une photo</h2>
+
+    </div>
+    <div>
+      <ion-button (click)="takePhoto()">Prendre une photo</ion-button>
+    </div>
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let photo of photos; index as position">
+            <ion-img [src]="photo.webviewPath"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  </div>
+</ion-content>
